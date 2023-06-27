@@ -86,3 +86,7 @@ for s in range(N_SCENARIOS):
 
         simulated_probs[proxy].append(proxy_prob)
         simulated_scores[proxy].append(has_proxy)
+
+if SAVE:
+    print('... Saving 1/1')
+    pickle.dump(simulated_scores, open('{}simulated_scores.p'.format(PATH), 'wb'))

@@ -16,7 +16,7 @@ print("### CHOOSE UNKNOWNS ###")
 weight_unknowns = user_inputs.assign_unknowns(ANIMALS, default_weight_unknowns)
 weight_nos = user_inputs.choose_nonzero_nos()
 
-PARAMS = {'N_SCENARIOS': 10000, 'UPDATE_EVERY': 100, "WEIGHT_NOS": weight_nos}
+PARAMS = {'N_SCENARIOS': 10000, 'UPDATE_EVERY': 1000, "WEIGHT_NOS": weight_nos}
 
 def run_cmd(cmd):
     print(cmd)
@@ -25,7 +25,7 @@ def run_cmd(cmd):
 def simulate_scores(animal, params):
     print("### SIMULATING SCORES FOR {} ###".format(animal.upper()))
     params['animal'] = animal
-    params['path'] = "{}_sims".format(animal)
+    params['path'] = "{}_".format(animal)
     params['unknown_prob'] = weight_unknowns[animal]
 
     run_cmd('python3 welfare_range_sims.py --animal {animal} --unknown_prob {unknown_prob} \
