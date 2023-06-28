@@ -16,7 +16,7 @@ print("### CHOOSE UNKNOWNS ###")
 weight_unknowns = user_inputs.assign_unknowns(ANIMALS, default_weight_unknowns)
 weight_nos = user_inputs.choose_nonzero_nos()
 
-PARAMS = {'N_SCENARIOS': 10000, 'UPDATE_EVERY': 1000, "WEIGHT_NOS": weight_nos}
+PARAMS = {'N_SCENARIOS': 40000, 'UPDATE_EVERY': 5000, "WEIGHT_NOS": weight_nos}
 
 def run_cmd(cmd):
     print(cmd)
